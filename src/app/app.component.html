@@ -1,0 +1,8 @@
+<main>
+  <h1>Previsão do Tempo</h1>
+  <input #cityInput type="text" placeholder="Digite o nome da cidade">
+  <button (click)="searchCity()">Buscar</button>
+  
+  <app-weather-information *ngIf="weather?.main" [weather]="weather"></app-weather-information>
+  <app-weather5-days *ngIf="weather5Days?.list" [weather5Days]="weather5Days"></app-weather5-days>
+</main>

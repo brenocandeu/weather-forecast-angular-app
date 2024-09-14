@@ -1,0 +1,15 @@
+<div class="weather-container">
+    <h2>{{weather.name}}</h2>
+    <div class="weather-info">
+        <img [src]="imgUrl" />
+        <p class="temperature">{{temp}}ºC</p>
+    </div>
+
+    <p class="description">{{description}}</p>
+
+    <div class="datails">
+        <p>Sensação térmica: {{feels_like}}ºC</p>
+        <p>Umidade: {{humidity}}</p>
+        <p>Pressão: {{pressure}}</p>
+    </div>
+</div>

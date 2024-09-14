@@ -1,0 +1,13 @@
+<div class="weather5Days-container">
+    <h3>Previsão Próximos 4 Dias</h3>
+    <div class="weather-list">
+        <div *ngFor="let forecast of nextFiveDaysForecast" class="weather-item">
+            <p class="forecast-day">{{ convertDate(forecast) }}</p>
+            <p>de {{ monthDate(forecast) }}</p>
+            <img [src]="getIconUrl(forecast)" alt="Previsão do tempo">
+            <p class="forecast-description">{{ forecast.weather[0].description }}</p>
+            <p>{{ roundTemperature(forecast.main.temp_min) }}ºC min / {{ roundTemperature(forecast.main.temp_max) }}ºC máx</p>
+            <!-- <h3>Data: {{ forecast.dt_txt }}</h3> -->
+        </div>
+    </div>
+</div>
